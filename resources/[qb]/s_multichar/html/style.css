@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800;900&display=swap');
+
+/* ------- 1. MAIN ------  */
+.container {
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.main-screen {
+    position: absolute;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    z-index: 100;
+}
+
+/* ------- 2. LOADING ------  */
+.loading {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 47%;
+    color:white;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align:center;
+
+}
+/* ------- 3. MAIN BAR ------  */
+.mainbar {
+    width: 50%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    position: absolute;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* ------- 3.1 MAIN BAR (TOP) ------  */
+.titlemultichar {
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    left: 10%;
+}
+
+.maintitle {
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    top:20%;
+    background: linear-gradient(180deg, rgba(51, 255, 182, 0.52) 0%, rgba(51, 255, 182, 0) 75.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #33FFB6;
+    -webkit-backdrop-filter: blur(11px);
+}
+
+.subtitle {
+    position: absolute;
+    top:50%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #808080 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.textinfo {
+    position: absolute;
+    top:70%;
+    width: 306px;
+    color: rgba(255,255,255,0.25);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* ------- 3.2 MAIN BAR (CHAR LIST) ------  */
+.mainbar-middle {
+    position: absolute;
+    width: 50%;
+    height: 85%;
+    left: 10%;
+    top : 12.5%;
+}
+
+.character {
+    position: relative;
+    width: 30%;
+    height: 17.5%;
+    margin-top: 15px;
+    transition: 0.2s;
+    opacity: 1;
+    background: radial-gradient(77% 77% at 50% 50%, rgba(255, 255, 255, 0.099) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 9px;
+    -webkit-backdrop-filter: blur(19.5px);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF; 
+}
+
+#slotnumber {
+    position: absolute;
+    left: 50px;
+    top: 41px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    background: linear-gradient(180deg, rgba(51, 255, 182, 0.52) 0%, rgba(51, 255, 182, 0) 75.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #33FFB6;
+    -webkit-backdrop-filter: blur(11px);
+}
+
+#slotpremium {
+    position: absolute;
+    left: 50px;
+    top: 41px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    background: linear-gradient(180deg, rgba(0, 234, 255, 0.52) 0%, rgba(251, 255, 51, 0) 75.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #00a5be;
+    -webkit-backdrop-filter: blur(11px);
+}
+
+#slot-name {
+    position: absolute;
+    left:30px;
+    top: 90px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+}
+
+#slot-namep {
+    position: absolute;
+    left:20px;
+    top: 90px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+}
+
+/* ------- 4 CHAR INFO ------  */
+
+.info-box {
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    left: 32.5%;
+    bottom: 5%;
+    opacity: 1;
+    background: radial-gradient(77% 77% at 50% 50%, rgba(255, 255, 255, 0.099) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 9px;
+    -webkit-backdrop-filter: blur(19.5px);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF; 
+}
+
+/* EMPTY SLOT */
+#no-char {
+    position: absolute;
+    color: #ededed;
+    width: 100%;
+    text-align:center;
+}
+
+/* NAME  */
+.info-title {
+    position: absolute;
+    width: 60%;
+    height: 40%;
+}
+
+.char-namee {
+    position:absolute;
+    width: 100%;
+    top: 20%;
+    text-transform: uppercase;
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+/* INFO CHAR  */
+.info {
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    top: 35%;
+    left:2.5%;
+}
+
+.bankbox {
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 0%;
+}
+
+.char-bank {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color:#00a5be;
+}
+
+.bankicon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(0, 234, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #00a5be;
+    filter: drop-shadow(0px 0px 15px rgba(0, 234, 255, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cashbox {
+    text-align: right; 
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 33%;
+    top: 0%;
+}
+
+.char-cash {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color: #45FFA6;
+}
+
+.cashicon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(27, 100, 65, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #45FFA6;
+    filter: drop-shadow(0px 0px 15px rgba(27, 100, 65, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+.jobbox {
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    left: 66%;
+    top: 0%;
+}
+
+.char-job {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color: #ffffff;
+}
+
+.jobicon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(255, 255, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(27, 100, 65, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+.countrybox {
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 55%;
+}
+
+.char-country {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color: #ffffff;
+}
+
+.countryicon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(255, 255, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(27, 100, 65, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+.birthdatebox {
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 55%;
+    left: 33%;
+}
+
+.char-birthdate {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color: #ffffff;
+}
+
+.birthdateicon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(255, 255, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(27, 100, 65, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+.genderbox {
+    position: absolute;
+    width: 33%;
+    height: 50%;
+    top: 55%;
+    left: 66%;
+}
+
+.char-gender {
+    position: absolute;
+    text-align: right;
+    width: 73%;
+    height: 100%;
+    top: 20%;
+    color: #ffffff;
+}
+
+.gendericon {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left:75%;
+    background: linear-gradient(359.92deg, rgba(255, 255, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(27, 100, 65, 0.24));
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* MAIN BUTTON  */
+.info-button {
+    position: absolute;
+    width: 40%; 
+    height: 100%;
+    left: 60%;
+    border-left: 1px solid white;
+    border-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.17) 45%, rgba(255, 255, 255, 0.17) 55%, rgba(0,0,0,0) 100%) 1;
+    border-radius: 17px;
+}
+
+#button {
+    position: relative;
+    left: 10%;
+    top: 25%;    
+    width: 80%;
+    height: 50%;
+    background: linear-gradient(359.92deg, rgba(51, 255, 182, 0.48) 0.07%, rgba(51, 255, 182, 0) 99.93%);
+    border: 1px solid #33FFB6;
+    filter: drop-shadow(0px 0px 31px rgba(51, 255, 182, 0.24));
+    border-radius: 3px;
+   
+}
+
+#button-text {
+    letter-spacing: .1vh;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 5vh;   
+}
+
+
+
+/* ------- 5. REGISTRATION ------  */
+.registerbox {
+    display: none;
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    left: 32.5%;
+    bottom: 5%;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    background: radial-gradient(77% 77% at 50% 50%, rgba(255, 255, 255, 0.099) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 9px;
+    -webkit-backdrop-filter: blur(19.5px);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF; 
+
+}
+/* BUTTON CLOSE */
+.close-box {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+}
+
+.buttonclose {
+    box-sizing: border-box;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 12px;
+    top: 12px;
+    background: linear-gradient(359.92deg, rgba(255, 0, 92, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #FF005C;
+    filter: drop-shadow(0px 0px 31px rgba(255, 0, 92, 0.24));
+    border-radius: 3px;
+}
+
+/* INPUTS */
+.inputs-box {
+    position: absolute;
+    left:10%;
+    width: 40%;
+    height: 100%;
+}
+
+.lineregister1 {
+    position:absolute;
+    width: 100%;
+    height: 25%;
+}
+
+.lineregister2 {
+    position:absolute;
+    width: 100%;
+    height: 25%;
+    top: 25%;
+}
+
+.lineregister3 {
+    position:absolute;
+    width: 100%;
+    height: 25%;
+    top: 50%;
+}
+
+.lineregister4 {
+    position:absolute;
+    width: 100%;
+    height: 25%;
+    top: 75%;
+}
+
+.char-reg-input {
+    position: absolute;
+    top: 15%;
+    left:5%;
+    width: 90%;
+    height: 70%;
+    transition: 0.2s;
+    opacity: 1;
+    background: none;
+    border: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+    -webkit-backdrop-filter: blur(19.5px);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF; 
+ 
+}
+
+.char-reg-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type="date"] {
+    color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* GENDER */
+.gender-box {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 50%;
+    text-transform: uppercase;
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 10vh;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.buttonmale {
+    box-sizing: border-box;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 25px;
+    top: 12px;
+    background: linear-gradient(359.92deg, rgba(0, 234, 255, 0.48) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #00a5be;
+    filter: drop-shadow(0px 0px 15px rgba(0, 234, 255, 0.24));
+    border-radius: 3px;
+}
+
+.buttonfemale {
+    box-sizing: border-box;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 25px;
+    top: 62px;
+    background: linear-gradient(359.92deg, rgba(208, 208, 208, 0.333) 0.07%, rgba(255, 0, 92, 0) 99.93%);
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.233));
+    border-radius: 3px;
+}
+
+/* CONFIRM BUTTON */
+.register-confirm {
+    position: absolute;
+    width: 40%; 
+    height: 100%;
+    left: 60%;
+}
+
+.register-button {
+    position: relative;
+    left: 10%;
+    top: 25%;    
+    width: 80%;
+    height: 50%;
+    background: linear-gradient(359.92deg, rgba(51, 255, 182, 0.48) 0.07%, rgba(51, 255, 182, 0) 99.93%);
+    border: 1px solid #33FFB6;
+    filter: drop-shadow(0px 0px 31px rgba(51, 255, 182, 0.24));
+    border-radius: 3px;
+   
+}
+
+.register-button > p {
+    letter-spacing: .1vh;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 5vh;   
+}
+
+/* ------- EFFECTS ------  */
+
+.boxlines {
+    position: absolute;
+    width: 25%;
+    height: 15%;
+    left: -12.5%;
+    top: 0%;
+    transform: rotate(-270deg);
+}
+
+.line1 {
+    clip-path: polygon(0 0, 63% 0, 100% 100%, 37% 100%);
+    width: 25%;
+    height: 100%;
+    left: 0%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    opacity: 1;
+    position: absolute;
+}
+
+.line2 {
+    clip-path: polygon(0 0, 63% 0, 100% 100%, 37% 100%);
+    width: 25%;
+    height: 100%;
+    left: 20%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    opacity: 1;
+    position: absolute;
+}
+
+.line3 {
+    clip-path: polygon(0 0, 63% 0, 100% 100%, 37% 100%);
+    width: 25%;
+    height: 100%;
+    left: 40%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    opacity: 1;
+    position: absolute;
+}
+
+.line4 {
+    clip-path: polygon(0 0, 63% 0, 100% 100%, 37% 100%);
+    width: 25%;
+    height: 100%;
+    left: 60%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    opacity: 1;
+    position: absolute;
+}
+
+.gradient {
+    position: absolute;
+    width: 5%;
+    height: 25%;
+    left: -10%;
+    top: 40%;
+    background: #33FFB6;
+    transform: rotate(-90deg);
+    filter: blur(84.5px);
+}
+
+.gradient2 {
+    position: absolute;
+    width: 5%;
+    height: 25%;
+    left: -10%;
+    top: 0%;
+    background: #33FFB6;
+    transform: rotate(-90deg);
+    filter: blur(84.5px);
+}
+
+.gradient3 {
+    position: absolute;
+    width: 15%;
+    height: 5%;
+    left: 55%;
+    bottom: -15%;
+    background: #33FFB6;
+    transform: rotate(-180deg);
+    filter: blur(84.5px);
+}
+
+.boxtext {
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    bottom: 30%;
+    left:-12.5%;
+    transform: rotate(-90deg);   
+}
+
+.charselection {
+     font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.05);
+
+     
+}
+
+.material-symbols-outlined.md-20 { position:absolute; left: 4px; top: 3px; font-size: 20px; }
+
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden !important;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
